@@ -1,0 +1,44 @@
+.mp_button_main {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  // Size Prop
+  &.micro {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+
+  &.small {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  &.medium {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  &.large {
+    padding: 1.12rem;
+    font-size: 1.12rem;
+  }
+
+  // Border radius
+  &.r0 {
+    border-radius: 0;
+  }
+
+  &.r5 {
+    border-radius: 0.25rem;
+  }
+
+  &.r10 {
+    border-radius: 0.5rem;
+  }
+
+  &.r20 {
+    border-radius: 1rem;
+  }
+}
