@@ -1,4 +1,4 @@
-## Component Library -- A component library designed for React and Next.js 📓
+## Component Lib -- A component library designed for React and Next.js 📓
 
 #### Installation...
 
