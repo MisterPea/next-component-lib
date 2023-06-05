@@ -1,7 +1,7 @@
 import { ColorType } from '@/utilities/types';
 import * as React from 'react';
 
-interface CircleDotProps {
+export interface CircleDotProps {
   /** Radius of the dots @default 2 */
   radius?: number;
   /** Radius of the spinner @default 10 */

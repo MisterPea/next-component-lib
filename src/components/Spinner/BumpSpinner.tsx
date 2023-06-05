@@ -1,7 +1,7 @@
 import { ColorType } from '@/utilities/types';
 import * as React from 'react';
 
-interface SpinnerProps {
+export interface BumpSpinnerProps {
   /** Animation duration in milliseconds - @default 1000 */
   duration?: number;
   /** Radius of the dots in pixels - @default 3 */
@@ -10,7 +10,7 @@ interface SpinnerProps {
   color?: ColorType;
 }
 
-export default function BumpSpinner({ duration = 800, dotRadius = 3, color = "black" }: SpinnerProps) {
+export default function BumpSpinner({ duration = 800, dotRadius = 3, color = "black" }: BumpSpinnerProps) {
 
   const stylesheet = document.styleSheets[0];
   const animationName = 'bumpLoader';

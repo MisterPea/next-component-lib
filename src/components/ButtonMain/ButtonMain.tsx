@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import './ButtonMain.scss';
 import { classNames } from '../../utilities/css';
 import { NextFont } from 'next/dist/compiled/@next/font';
@@ -15,6 +15,13 @@ export interface ColorGroup {
   iconRight?: ColorType;
 }
 
+/* To Do:
+  • Ability to inject/override style in a repeatable fashion.
+    This should be for icons and text. We need to have the capacity
+    to adjust font-size, letter-spacing etc.
+  • Selectable transition times.
+*/
+
 export interface ButtonMainProps {
   /** Button Size - @default 'medium' */
   size?: 'micro' | 'small' | 'medium' | 'large' | 'xlarge';
@@ -22,6 +29,8 @@ export interface ButtonMainProps {
   borderRadius?: 'r0' | 'r4' | 'r8' | 'full';
   /** String to be displayed inside button */
   label: string;
+  /** Title text to be shown on mouseover */
+  title?: string;
   /** onClick handler */
   onClick?: () => void;
   /** ColorGroup applied as default */
@@ -59,6 +68,7 @@ export default function ButtonMain({
   activeColor,
   disabledColor,
   border = 0,
+  title,
   fullWidth = false,
   size = 'medium',
   borderRadius = 'r4',
@@ -160,6 +170,8 @@ export default function ButtonMain({
         ref={mainBtnRef}
         aria-disabled={disabled}
         tabIndex={0}
+        title={title}
+        type='button'
         {...props}>
         {_wingElement(iconLeft, '-btn_left', primaryColor.iconLeft, iconOnLeftClick)}
         <div className='-btn_center' style={textStyle}>{label}</div>
